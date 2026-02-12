@@ -1,0 +1,30 @@
+body {
+    background-color: burlywood;
+}
+header {
+    text-align: center;
+
+}
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+#lewa {
+    height: 200px;
+    border-radius: 40px;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: chocolate;
+    box-shadow: 13px 31px 27px -18px rgba(66, 68, 90, 1);
+}
+#prawa {
+    border-radius: 40px;
+    padding: 30px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+table,th,td {
+    padding: 5px;
+    border-collapse: collapse;
+    border: 3px solid black
+}
