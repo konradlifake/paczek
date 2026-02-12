@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pączki</title>
+</head>
+<body>  
+        <h1>Kalkulator Kalorii</h1>
+
+        <form>
+            <label for="lukier">LUKIER</label>
+            <input type="checkbox" name="" id="lukier"> <br>
+            <label for="nadzienie">x2 Nadzienie</label> 
+            <input type="checkbox" name="" id="nadzienie"> <br> <br>
+            <select id="paczek"> 
+                <option value="500">DUBAJSKI</option>
+                <option value="400">CZEKOLADOWY</option>
+                <option value="350">RÓŻANY</option>
+            </select> <br> <br>
+            <label for="ilosc">WPISZ ILOŚĆ PĄCZKÓW</label>
+            <input type="number" name="" id="ilosc"> <br>
+
+            <input type="button" name="" value="OBLICZ" id="" onclick="obliczenia()">
+        </form>
+
+        <p id="wynik"></p>
+
+        <script>
+           function obliczenia() {
+                     let paczekbazowy = parseInt(document.getElementById("paczek").value);
+                     let ilosc = document.getElementById("ilosc").value;
+
+                     if (isNaN(ilosc) || ilosc <= 0) {
+                         document.getElementById("wynik").innerHTML = "Podaj poprawną ilość pączków!";
+                         return;
+                     }
+                 
+                     let lukier = document.getElementById("lukier").checked;
+                     let nadzienie = document.getElementById("nadzienie").checked;
+                 
+                     let dodatkisigma = paczekbazowy;
+                 
+                     if (lukier) {
+                         dodatkisigma += 100;
+                     }
+                     if (nadzienie) {
+                         dodatkisigma += 200;
+                     }
+                 
+                     let suma = dodatkisigma * ilosc;
+                 
+                     document.getElementById("wynik").innerHTML = "Smacznego zjadasz: " + suma + " kalori";
+}
+        </script>
+</body>
+</html>
