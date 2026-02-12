@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pączki</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>  
+    <header>
         <h1>Kalkulator Kalorii</h1>
+</header>
 
+    <main>
+        <section id="lewa">
         <form>
             <label for="lukier">LUKIER</label>
             <input type="checkbox" name="" id="lukier"> <br>
@@ -25,6 +30,35 @@
         </form>
 
         <p id="wynik"></p>
+    </section>
+
+        <section id="prawa">
+            <table>
+                <tr>
+                    <th>OBRAZEK</th>
+                    <th>NAZWA</th>
+                    <th>KALORIE</th>
+                </tr>
+
+                <tr>
+                    <td><img src="dubajski.jpg" alt=""></td>
+                    <td>DUBAJSKI</td>
+                    <td>500</td>
+                </tr>
+
+                <tr>
+                    <td><img src="czekoladowy.jpg" alt=""></td>
+                    <td>CZEKOLADOWY</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td><img src="rozany.jpg" alt=""></td>
+                    <td>RÓŻANY</td>
+                    <td>350</td>
+                </tr>
+            </table>
+        </section>
+        </main>
 
         <script>
            function obliczenia() {
